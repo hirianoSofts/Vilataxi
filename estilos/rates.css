@@ -1,0 +1,173 @@
+/* ==========================================================================
+   SEÇÃO DE AVALIAÇÕES / DEPOIMENTOS
+   ========================================================================== */
+.reviews-section {
+  background-color: var(--white);
+  padding: 5rem 1.5rem;
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviews-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+/* CAIXA DE SCORE RESUMO */
+.rating-summary-box {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  padding: 1.2rem 2rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.overall-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.rating-score {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.stars-wrapper i {
+  color: #F59E0B; /* Amarelo Estrela */
+  font-size: 1.4rem;
+}
+
+.rating-count {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.rating-count strong {
+  color: var(--text-dark);
+}
+
+/* GRID DE DEPOIMENTOS */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+}
+
+.review-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+  position: relative;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  border-color: rgba(35, 58, 53, 0.2);
+}
+
+/* CARD EM DESTAQUE (Ex: Motorista) */
+.review-card.highlight-card {
+  background: #F0F4F3;
+  border-color: var(--primary);
+}
+
+.review-top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.user-avatar img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-info h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.user-role {
+  font-size: 0.8rem;
+  color: var(--accent-green);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+.user-role.driver-role {
+  color: #D97706;
+}
+
+.card-stars {
+  grid-column: span 2;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.card-stars i {
+  color: #F59E0B;
+  font-size: 1.1rem;
+}
+
+.review-text {
+  color: var(--text-dark);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* RESPONSIVIDADE DESKTOP */
+@media (min-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reviews-header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .reviews-header .section-title {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
